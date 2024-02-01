@@ -1,5 +1,5 @@
 site_name: Dug Developer Documentation
-site_url: temp
+site_url: https://dug.readthedocs.org
 repo_url: https://github.com/helxplatform/search-documentation
 
 nav:
