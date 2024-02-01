@@ -21,8 +21,8 @@ and create a full text search index based on those knowledge graphs.
 
 # Roger
 
-Roger is a pipeline toolkit built around dug to index datasets at scale. 
-Roger makes use of Dug's internals by breaking them down into individual 
-tasks making it easier to manage the indexing workflow in a robust manner. 
-Dug's internal procedures are broken down into logical steps for better manging
-failures , restarts and parallelization.
+
+Roger is a comprehensive pipeline toolkit designed to index datasets on a large scale. It leverages the internals of 
+Dug, breaking them down into discrete tasks to facilitate the management of the indexing workflow with robust 
+efficiency. The internal procedures of Dug are deconstructed into logical steps, enhancing the management of 
+failures, restarts, and parallelization.
