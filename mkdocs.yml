@@ -108,7 +108,7 @@ plugins:
 extra:
     social:
         - icon: fontawesome/brands/github
-          link: https://github.com/NCATSTranslator
+          link: https://github.com/helxplatform/dug
 
 watch:
     - docs
