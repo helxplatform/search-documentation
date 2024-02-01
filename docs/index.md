@@ -26,3 +26,4 @@ Roger is a comprehensive pipeline toolkit designed to index datasets on a large 
 Dug, breaking them down into discrete tasks to facilitate the management of the indexing workflow with robust 
 efficiency. The internal procedures of Dug are deconstructed into logical steps, enhancing the management of 
 failures, restarts, and parallelization.
+
