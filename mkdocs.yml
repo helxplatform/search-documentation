@@ -19,6 +19,7 @@ nav:
           - Dug search web API: development-guide/dug/web-api.md
         - Roger:
           - Quick Start: development-guide/roger/index.md
+          - Pipeline structure: development-guide/roger/pipelines.md
           - Configuration: development-guide/roger/config.md
         - Tutorials:
           - Adding a Parser: tutorials/parsers.md
