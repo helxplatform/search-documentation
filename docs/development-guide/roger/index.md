@@ -1,0 +1,1 @@
+![image](../../img/Roger%20Architecture.jpeg)
