@@ -52,11 +52,10 @@ built.
 
 ### Redis graph database and Insight GUI (`redis-master` and `redis-insight`)
 
-The knowledge graph is hosted in the Redis key-value store using the RedisGraph
+The knowledge graph is hosted in the Redis key-value store using the FalkorDB
 extension. The reference implementation launches a single redis database
-instance, along with a separate instance to serve the Redis Insight GUI. (NOTE:
-Redis has announced an end-of-life date for RedisGraph, which will necessitate
-moving to a different graph database in the future for Roger.)
+instance, along with an optional separate instance to serve the Redis Insight
+GUI, should it be wanted.
 
 ### TranQL API
 
@@ -90,23 +89,26 @@ All of these services are accessed over REST APIs.
 
 The NER engine accepts blocks of text or metadata and uses specially trained
 machine learning language processing tools to find entities in the text that
-correspond to biomedical concepts. These concepts are then annotated, allowing
+correspond to biomedical concepts. These concepts are then annotated with a
+compact universal resource identifier (CURIE), allowing
 them to be resolved to specific points on the knowledge graph in the following
 steps.
 
 #### Name resolver
 
-The name resolver API attempts to resolve synonyms into similar concepts, and
-identify them using ontological compact universal resource identifiers
-(CURIEs).
+The name resolver API attempts to resolve synonyms into similar concepts. In the
+Dug workflow, the `annotate_and_index` pipeline passes individual CURIEs to the
+name resolver, which responds with a list of CURIEs that can be used as synonyms
+for the input.
 
 #### Node normalizer
 
 Using the BioLink Model registry as an ontological base, the node normalizer
-ensures that a multiplicity of types are resolved to a more streamlined BioLink
-ontology type base. This allows for the simplification of the knowledge graph
-and a reduction in concept duplication that might arise from identical or
-closely related concepts in two different ontologies.
+accepts individual CURIEs and resolves them to a preferred synonym, as well as
+identifying the semantic type under the BioLink Model. This allows for the
+simplification of the knowledge graph and a reduction in concept duplication
+that might arise from identical or closely related concepts in different
+ontologies.
 
 #### LakeFS
 
