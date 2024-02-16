@@ -24,8 +24,10 @@ After annotation and concept expansion, the resulting data structure is indexed 
 #### Search Functionality
 Dug's search API exposes endpoints for querying each underlying Elasticsearch index:
 
-. `/search_var`: Search for study variables matching a user's query.
-. `/search_concepts`: Search for ontological concepts matching a user's query.
-. `/search_kg: Search` for knowledge-graph answers matching a user's query and an ontological concept ID.
+`/search_var`: Search for study variables matching a user's query.
+
+`/search_concepts`: Search for ontological concepts matching a user's query.
+
+`/search_kg: Search` for knowledge-graph answers matching a user's query and an ontological concept ID.
 
 
