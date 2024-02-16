@@ -10,10 +10,10 @@
 3. Elasticsearch: The underlying search engine used for indexing and retrieving metadata records.
 
 ### Data Ingestion
-Dug's ingestion pipeline abstracts retrieval modes and data parsing formats to accommodate diverse metadata formats available across public data repositories. It parses various metadata formats into a common DugElement metadata model, akin to the Data Tags Suite (DATS) metadata schema. Developers can extend Dug's plug-in interface to parse input data into DugElement objects, making it adaptable to nearly any metadata format.
+Dug's ingestion pipeline abstracts retrieval modes and data parsing formats to accommodate diverse metadata formats available across public data repositories. It parses various metadata formats into a common DugElement metadata model, akin to the Data Tags Suite (DATS) metadata schema. 
 
 ### Data Annotation
-Dug's annotation module extracts biomedical ontology identifiers from ingested metadata elements using tools for Named Entity Recognition (NER). The module leverages the Monarch Initiative's Biolink API to retrieve ontological identifiers and additional information. Developers can extend Dug's annotation interface by creating child classes to specify new API endpoints.
+Dug's annotation module extracts biomedical ontology identifiers from ingested metadata elements using tools for Named Entity Recognition (NER). The module leverages the Monarch Initiative's Biolink API to retrieve ontological identifiers and additional information. 
 
 ### Concept Expansion
 Concept expansion further annotates ontological identifiers by identifying relevant connections within ontological knowledge graphs. This process enhances search results by establishing connections between entities based on predicates defined in the Biolink upper ontology.
