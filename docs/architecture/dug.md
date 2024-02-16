@@ -12,16 +12,23 @@
 Dug's ingestion pipeline abstracts retrieval modes and data parsing formats to accommodate diverse metadata formats available across public data repositories. It parses various metadata formats into a common DugElement metadata model, akin to the Data Tags Suite (DATS) metadata schema. 
 
 ### Data Annotation
-Dug's annotation module extracts biomedical ontology identifiers from ingested metadata elements using tools for Named Entity Recognition (NER). The module leverages the Monarch Initiative's Biolink API to retrieve ontological identifiers and additional information. 
+#### Named Entity Recognition (NER)
+Dug's annotation module employs Named Entity Recognition (NER) techniques to extract biomedical ontology identifiers from free-text descriptions of study variables. This process enhances metadata quality and enables more accurate search results.
+
+#### Ontological Identifier Extraction
+The annotation module interfaces with external services, such as the Monarch Initiative's Biolink API, to extract ontological identifiers from metadata elements. These identifiers provide additional context and semantic meaning to the metadata.
 
 ### Concept Expansion
-Concept expansion further annotates ontological identifiers by identifying relevant connections within ontological knowledge graphs. This process enhances search results by establishing connections between entities based on predicates defined in the Biolink upper ontology.
+#### Knowledge Graph Representation
+Concept expansion in Dug is facilitated through the use of knowledge graphs, where nodes represent entity types (e.g., diseases, genes) and edges describe relationships between entities. This structured representation enables Dug to establish connections between ontological identifiers and enrich metadata with contextual information.
+
+#### Integration with Biolink Upper Ontology
+Dug leverages the Biolink upper ontology to define connections across domain-specific ontologies. This integration allows for the establishment of meaningful relationships between entities, enhancing the semantic capabilities of the system.
 
 ### Data Indexing
 After annotation and concept expansion, the resulting data structure is indexed using Elasticsearch. Dug's back-end search architecture utilizes linked Elasticsearch indices for speed and flexibility. Indexed metadata records include search terms extracted from annotations and expanded concepts. Dug organizes search results by partitioning metadata records, core ontological concepts, and expanded knowledge-graph answers into separate Elasticsearch indices.
 
-### Search Engine
-#### Search Functionality
+### Search Functionality
 Dug's search API exposes endpoints for querying each underlying Elasticsearch index:
 
 `/search_var`: Search for study variables matching a user's query.
