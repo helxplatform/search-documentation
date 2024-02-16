@@ -29,7 +29,7 @@ Dug leverages the Biolink upper ontology to define connections across domain-spe
 After annotation and concept expansion, the resulting data structure is indexed using Elasticsearch. Dug's back-end search architecture utilizes linked Elasticsearch indices for speed and flexibility. Indexed metadata records include search terms extracted from annotations and expanded concepts. Dug organizes search results by partitioning metadata records, core ontological concepts, and expanded knowledge-graph answers into separate Elasticsearch indices.
 
 ### The Dug Data Development Kit (DDK)
-Dug provides a tool chain for the ingest, annotation, knowledge graph representation, query, crawling, indexing, and search of datasets with metadata. More detail can be found at https://github.com/yskale/dug#the-dug-data-development-kit-ddk  
+Dug provides a tool chain for the ingest, annotation, knowledge graph representation, query, crawling, indexing, and search of datasets with metadata. More detail can be found at (https://github.com/helxplatform/dug#the-dug-data-development-kit-ddk)
 
 ### Search Functionality
 Dug's search API exposes endpoints for querying each underlying Elasticsearch index:
