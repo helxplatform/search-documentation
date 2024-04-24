@@ -29,7 +29,7 @@ nav:
         - CI/CD:
             - Continuous Integration for Dug: deployment-guide/dug.md
             - Continuous Integration for Roger: deployment-guide/roger.md
-        - Helm Chart: deployment-guide/helm.md
+        - Deploy using Helm Chart: deployment-guide/helm.md
 
 
 #extra_css:
