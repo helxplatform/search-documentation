@@ -11,11 +11,11 @@ and create a full text search index based on those knowledge graphs.<font color 
 
 ## Key Features
 - **FAIR**: Dug applies <delsemantic web and knowledge graph methods</del> to improve the [FAIR](https://www.go-fair.org/fair-principles/)-ness of research data. As an example, [dbGaP](https://www.ncbi.nlm.nih.gov/gap/) is a rich source of metadata about biomedical knowledge 
-derived from clinical research like ~~the underutilized~~ [TOPMed](https://www.nhlbiwgs.org/) data sets. A key obstacle to 
+derived from clinical research like <del>the underutilized</del> [TOPMed](https://www.nhlbiwgs.org/) data sets. A key obstacle to 
 leveraging this knowledge is the lack of researcher tools to navigate from a set of concepts of interest towards 
 relevant study variables. <del>In a word, **search**.</del> <font color="blue">(This last sentence implies that searching is inherently semantic-webby but it's not. Searching predates semantic web. Additionally I don't think this last sentence is doing much for you.)</font>
 
-	<font color = "blue">Comments/Suggestions for this bullet point:==
+	<font color = "blue">Comments/Suggestions for this bullet point:
 	
 	- Using both "semantic web" and "knowledge graph methods" is a bit redundant-sounding.
 	- I also think that this sentence isn't doing a lot for you. It's really saying "Dug + FAIR" which is not meaningful, kind of like "Apples have seeds," leaving the reader with a "so what?" 
@@ -27,14 +27,14 @@ relevant study variables. <del>In a word, **search**.</del> <font color="blue">(
 
 
 
-While other approaches to searching this data exist, our focus is semantic search: ~~For us, "relevant" is defined as ~~ <font color = "blue">It's good that you are saying "for us" here and demarking the term as having OUR specialized meaning. However, I think Dug's search results should be relevant in the traditional sense. Additionally I don't think you need to redefine the term. I think what follows is important enough to stand on its own, and I actually think it is another key feature of Dug :).</font> 
+While other approaches to searching this data exist, our focus is semantic search: <del>For us, "relevant" is defined as</del><font color = "blue"> It's good that you are saying "for us" here and demarking the term as having OUR specialized meaning. However, I think Dug's search results should be relevant in the traditional sense. Additionally I don't think you need to redefine the term. I think what follows is important enough to stand on its own, and I actually think it is another key feature of Dug :).</font> 
 
-- **Human Curated:** Dug is built on X number of biomedical ontologies, such as A, B, and C, manually curated by experts in the biomedical semantic community <font color="blue">OR SOMETHING LIKE THAT, WHATEVER JIM MIGHT SAY ABOUT HIS COMMUNITY.(The term peer-review I don't think applies and I would suggest steering clear of it unless you could guarantee to me that every single ontology Dug uses employs a true peer-review process. But I'm pretty sure they don't. Plus, I don't think it is needed anyway. The fact that expert ontologists come up with these ontologies is assurance enough that Dug is based on authoritative information.)</font> ~~Given a search term,~~ Dug returns results that are related based on connections in ~~ontological~~ <font color = "blue">(Treat ontology and KG as synonyms because in the context of Dug they are and to do otherwise makes your text wordy and redundant.)</font> biomedical knowledge graphs. <font color = "blue">This sentence is your punch. This answers the question of so what? Why should I care that it is human curated? Possibly you might want to revise the earlier sentence to say something like...</font> Dug returns results that expose connections between concepts in biomedical ontologies which <font color = "blue">IS IMPORTANT OR HELPFUL HOW? Now give me your Z example, and this example should make a good case for why human curated is best... so pick one that a machine wouldn't perform well with on its own.</font>
+- **Human Curated:** Dug is built on X number of biomedical ontologies, such as A, B, and C, manually curated by experts in the biomedical semantic community <font color="blue">OR SOMETHING LIKE THAT, WHATEVER JIM MIGHT SAY ABOUT HIS COMMUNITY.(The term peer-review I don't think applies and I would suggest steering clear of it unless you could guarantee to me that every single ontology Dug uses employs a true peer-review process. But I'm pretty sure they don't. Plus, I don't think it is needed anyway. The fact that expert ontologists come up with these ontologies is assurance enough that Dug is based on authoritative information.)</font> <del>Given a search term,</del> Dug returns results that are related based on connections in <del>ontological</del> <font color = "blue">(Treat ontology and KG as synonyms because in the context of Dug they are and to do otherwise makes your text wordy and redundant.)</font> biomedical knowledge graphs. <font color = "blue">This sentence is your punch. This answers the question of so what? Why should I care that it is human curated? Possibly you might want to revise the earlier sentence to say something like...</font> Dug returns results that expose connections between concepts in biomedical ontologies which <font color = "blue">IS IMPORTANT OR HELPFUL HOW? Now give me your Z example, and this example should make a good case for why human curated is best... so pick one that a machine wouldn't perform well with on its own.</font>
 
-~~To achieve this, we annotate study metadata with terms from [biomedical ontologies](http://www.obofoundry.org/), 
+<del>To achieve this, we annotate study metadata with terms from [biomedical ontologies](http://www.obofoundry.org/), 
 contextualize them within a unifying [upper ontology](https://biolink.github.io/biolink-model/) allowing study data 
 to be federated with [larger knowledge graphs](https://researchsoftwareinstitute.github.io/data-translator/), 
-and create a full text search index based on those knowledge graphs.~~
+and create a full text search index based on those knowledge graphs.</del>
 
 - OTHERS? I suspect there are more features you could discuss here...
 
