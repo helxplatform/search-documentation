@@ -9,6 +9,7 @@ nav:
         - Roger Architecture: architecture/roger.md
         - Frequently Asked Questions: faq.md
         - License: license.md
+        - laura index: index-laura.md
     - Development Guide:
         - Dug:
           - Quick Start: development-guide/dug/index.md
