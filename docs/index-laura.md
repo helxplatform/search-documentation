@@ -1,5 +1,5 @@
 # Dug: Digging Up Data in the Dark 
-<font color = "blue">(capitalize)</font>
+<font color = "blue">(capitalize the title above ^)</font>
 
 <font color = "blue">Start with a brief introduction that defines Dug ... it's a search engine based on graphs, etc. etc. Include the information you had in this statement below: </font> To achieve this, <del>we</del> <font color = "blue">our data stewards</font> annotate study metadata with terms from [biomedical ontologies](http://www.obofoundry.org/), 
 contextualize them within a unifying [upper ontology](https://biolink.github.io/biolink-model/) allowing study data 
