@@ -1,6 +1,7 @@
-# Dug: ~~d~~==D==igging ~~u~~==U==p ~~d~~==D==ark ~~d~~==D==ata
+# Dug: Digging Up Data in the Dark 
+<font color = "blue">(capitalize)</font>
 
-<font color = "blue">Start with a brief introduction that defines Dug ... it's a search engine based on graphs, etc. etc. Include the information you had in this statement below: </font> To achieve this, ~~we~~ <font color = "blue">our data stewards</font> annotate study metadata with terms from [biomedical ontologies](http://www.obofoundry.org/), 
+<font color = "blue">Start with a brief introduction that defines Dug ... it's a search engine based on graphs, etc. etc. Include the information you had in this statement below: </font> To achieve this, <del>we</del> <font color = "blue">our data stewards</font> annotate study metadata with terms from [biomedical ontologies](http://www.obofoundry.org/), 
 contextualize them within a unifying [upper ontology](https://biolink.github.io/biolink-model/) allowing study data 
 to be federated with [larger knowledge graphs](https://researchsoftwareinstitute.github.io/data-translator/), 
 and create a full text search index based on those knowledge graphs.<font color = "blue>up here</font>
@@ -9,11 +10,10 @@ and create a full text search index based on those knowledge graphs.<font color 
 
 
 ## Key Features
-- **FAIR**: Dug applies ~~semantic web and knowledge graph methods~~ to improve the 
-[FAIR](https://www.go-fair.org/fair-principles/)-ness of research data. As an example, [dbGaP](https://www.ncbi.nlm.nih.gov/gap/) is a rich source of metadata about biomedical knowledge 
+- **FAIR**: Dug applies <delsemantic web and knowledge graph methods</del> to improve the [FAIR](https://www.go-fair.org/fair-principles/)-ness of research data. As an example, [dbGaP](https://www.ncbi.nlm.nih.gov/gap/) is a rich source of metadata about biomedical knowledge 
 derived from clinical research like ~~the underutilized~~ [TOPMed](https://www.nhlbiwgs.org/) data sets. A key obstacle to 
 leveraging this knowledge is the lack of researcher tools to navigate from a set of concepts of interest towards 
-relevant study variables. ~~In a word, **search**.~~ <font color="blue">(This last sentence implies that searching is inherently semantic-webby but it's not. Searching predates semantic web. Additionally I don't think this last sentence is doing much for you.)</font>
+relevant study variables. <del>In a word, **search**.</del> <font color="blue">(This last sentence implies that searching is inherently semantic-webby but it's not. Searching predates semantic web. Additionally I don't think this last sentence is doing much for you.)</font>
 
 	<font color = "blue">Comments/Suggestions for this bullet point:==
 	
