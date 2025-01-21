@@ -21,4 +21,6 @@ Dug leverages knowledge graphs to enhance the discovery of relevant research dat
 
 Dug is available in two versions to suit different needs: Vanilla Dug and Roger Dug. Vanilla Dug is a standalone platform that requires minimal configuration and offers limited customization, making it ideal for users managing smaller datasets with fewer anticipated changes. On the other hand, Roger Dug is a powerful, modular processing pipeline designed for indexing large-scale datasets. It provides advanced customization options, including the ability to integrate custom-built parsers and annotators, greater flexibility for incorporating new datasets, enhanced precision for isolating and troubleshooting pipeline components to improve efficiency, and asset backup capabilities using the repository of your choice.
 
+---
+
 1. *Above description taken from Waldrop, Alexander M., et al. (1 Jan. 2021). Dug: A Semantic Search Engine Leveraging Peer-Reviewed Literature to Span Biomedical Data Repositories. bioRxiv, Cold Spring Harbor Laboratory, www.biorxiv.org/content/10.1101/2021.07.07.451461v1.*
