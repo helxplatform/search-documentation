@@ -19,7 +19,7 @@ Dug leverages knowledge graphs to enhance the discovery of relevant research dat
 
 # Roger
 
-Dug is available in two versions to suit different needs: Vanilla Dug and Roger Dug. Vanilla Dug is a standalone platform that requires minimal configuration and offers limited customization, making it ideal for users managing smaller datasets with fewer anticipated changes. On the other hand, Roger Dug is a powerful, modular processing pipeline designed for indexing large-scale datasets. It provides advanced customization options, including the ability to integrate custom-built parsers and annotators, greater flexibility for incorporating new datasets, enhanced precision for isolating and troubleshooting pipeline components to improve efficiency, and asset backup capabilities using the repository of your choice.
+Dug is available in two versions to suit different needs: Core Dug and Roger. Core Dug is a standalone platform that requires minimal configuration and offers limited customization, making it ideal for users managing smaller datasets with fewer anticipated changes. On the other hand, Roger is a powerful, modular processing pipeline designed for indexing large-scale datasets. It provides advanced customization options, including the ability to integrate custom-built parsers and annotators, greater flexibility for incorporating new datasets, enhanced precision for isolating and troubleshooting pipeline components to improve efficiency, and asset backup capabilities using the repository of your choice.
 
 ---
 
