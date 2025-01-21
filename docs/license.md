@@ -1,0 +1,2 @@
+- [Dug License](https://github.com/helxplatform/dug?tab=MIT-1-ov-file)
+- [Roger License](https://github.com/helxplatform/roger?tab=MIT-1-ov-file)
