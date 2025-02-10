@@ -29,7 +29,6 @@ RENCI uses Helm charts to deploy Dug in Kubernetes. A Helm chart is like a recip
 # Ensure the name 'helx-charts' is used in the command below. 
 $ helm repo add helx-charts https://helxplatform.github.io/helm-charts/
 ```
-
 For more help on initatilizing, see [Initialize a Helm Chart Repository](https://helm.sh/docs/intro/install/) and [Helm Repo Add](https://helm.sh/docs/helm/helm_repo_add/).
 
 3. Now that you've initialized Dug's Helm repo, pull the latest Helm chart or [update](https://helm.sh/docs/helm/helm_repo_update/) any existing charts on your local machine with the latest changes.
