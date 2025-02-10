@@ -33,7 +33,7 @@ For more help on initatilizing, see [Initialize a Helm Chart Repository](https:/
 
 3. Now that you've initialized Dug's Helm repo, pull the latest Helm chart or [update](https://helm.sh/docs/helm/helm_repo_update/) any existing charts on your local machine with the latest changes.
 ```bash
-# update the repo
+# Update the repo
 $ helm repo update
 ```
 
