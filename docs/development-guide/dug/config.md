@@ -12,13 +12,13 @@ Customize through the helm chart: https://github.com/helxplatform/dug/blob/devel
 
 
 
-## 1. Setting Up the Dug Environment
+## 1. Set Up the Dug Environment
 PJ's stuff here
 
 Client machine must be able to access enviro
 
 
-## 2. Adding the Dug Helm Repo and Pulling the Latest Helm Chart
+## 2. Add the Helm Repo and Pull the Latest Helm Chart
 
 RENCI uses Helm charts to deploy Dug in Kubernetes. A Helm chart is like a recipe. It bundles everything an application needs&mdash;code, settings, and dependencies&mdash;into a single package. This makes it easier to install, update, and manage applications consistently across different environments without having to manually configure everything each time.
 
@@ -46,7 +46,7 @@ $ helm search repo helx-charts
 
 
 
-## 3. Installing Dug
+## 3. Install Dug
 
 From your local machine, create a Helm values file (config file) and inject those values into the existing Search Helm chart shown below.
 
