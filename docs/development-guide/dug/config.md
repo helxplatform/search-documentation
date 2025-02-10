@@ -22,9 +22,9 @@ Client machine must be able to access enviro
 
 RENCI uses Helm charts to deploy Dug in Kubernetes. A Helm chart is like a recipe. It bundles everything an application needs&mdash;code, settings, and dependencies&mdash;into a single package. This makes it easier to install, update, and manage applications consistently across different environments without having to manually configure everything each time.
 
-To access Dug's Helm chart, you must [install Helm](https://helm.sh/docs/intro/install/) on your local machine. 
+1. To access Dug's Helm chart, you must [install Helm](https://helm.sh/docs/intro/install/) on your local machine. 
 
-Once installed, initialize Dug's Helm chart repository.
+2. Once installed, initialize Dug's Helm chart repository.
 ```bash
 # Ensure the name 'helx-charts' is used in the command below. 
 $ helm repo add helx-charts https://helxplatform.github.io/helm-charts/
@@ -32,14 +32,13 @@ $ helm repo add helx-charts https://helxplatform.github.io/helm-charts/
 
 For more help on initatilizing, see [Initialize a Helm Chart Repository](https://helm.sh/docs/intro/install/) and [Helm Repo Add](https://helm.sh/docs/helm/helm_repo_add/).
 
-Now that you've initialized Dug's Helm repo, pull the latest Helm chart or [update](https://helm.sh/docs/helm/helm_repo_update/) any existing charts on your local machine with the latest changes.
+3. Now that you've initialized Dug's Helm repo, pull the latest Helm chart or [update](https://helm.sh/docs/helm/helm_repo_update/) any existing charts on your local machine with the latest changes.
 ```bash
 # update the repo
 $ helm repo update
 ```
 
-To ensure you can access Helm charts, [search](https://helm.sh/docs/helm/helm_search/) the repo for `helx-charts`
-
+4. To ensure you can access Helm charts, [search](https://helm.sh/docs/helm/helm_search/) the repo for `helx-charts`
 ```bash
 $ helm search repo helx-charts
 ```
