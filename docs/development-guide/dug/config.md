@@ -30,7 +30,7 @@ Once installed, initialize Dug's Helm chart repository.
 $ helm repo add helx-charts https://helxplatform.github.io/helm-charts/
 ```
 
-For more help on initatilizing, see [Initialize a Helm Chart Repository](https://helm.sh/docs/intro/install/) and [Helm Repo Add](https://helm.sh/docs/helm/helm_repo_add/)
+For more help on initatilizing, see [Initialize a Helm Chart Repository](https://helm.sh/docs/intro/install/) and [Helm Repo Add](https://helm.sh/docs/helm/helm_repo_add/).
 
 Now that you've initialized Dug's Helm repo, pull the latest Helm chart or [update](https://helm.sh/docs/helm/helm_repo_update/) any existing charts on your local machine with the latest changes.
 ```bash
@@ -38,12 +38,11 @@ Now that you've initialized Dug's Helm repo, pull the latest Helm chart or [upda
 $ helm repo update
 ```
 
-To ensure you've successfully connected to Dug's Helm repo and can access Helm charts, [search](https://helm.sh/docs/helm/helm_search/) the repo for `helx-charts`
+To ensure you can access Helm charts, [search](https://helm.sh/docs/helm/helm_search/) the repo for `helx-charts`
 
 ```bash
 $ helm search repo helx-charts
 ```
-
 
 
 ## 3. Install Dug
