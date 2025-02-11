@@ -38,7 +38,7 @@ $ helm search repo helx-charts
 
 ## 3. Create a Helm Values File 
 
-From your local machine, create a Helm [values file](https://helm.sh/docs/chart_best_practices/values/) with values of your choice. The full list of configurable options can be found [here](https://github.com/helxplatform/search-chart/blob/develop/README.md) or [here](https://github.com/helxplatform/search-chart/blob/master/values.yaml).
+From your local machine, create a Helm [values file](https://helm.sh/docs/chart_best_practices/values/) with values of your choice. The full list of configurable options can be found on the Dug GitHub repo either[here](https://github.com/helxplatform/search-chart/blob/develop/README.md) or [here](https://github.com/helxplatform/search-chart/blob/master/values.yaml).
 
 The sample Helm values file below can be used as a starting point. It will install the following sub-components:
 - Airflow
