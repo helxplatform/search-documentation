@@ -8,7 +8,13 @@ Customizations for specific implementations of Dug (e.g., BDC Dug) are documente
 ## 1. Set Up the Dug Environment
 PJ's stuff here
 
-Client machine must be able to access enviro
+Client machine must be able to access enviro 
+
+Dug devs provided with X, Y, Z... 
+
+K8 cluster must have so much compute power... 
+
+(Get specs on current cluster)
 
 
 ## 2. Add the Helm Repo and Pull the Latest Helm Chart
@@ -41,6 +47,7 @@ $ helm search repo helx-charts
 From your local machine, create a Helm [values file](https://helm.sh/docs/chart_best_practices/values/) with values of your choice. The full list of configurable options can be found on the Dug GitHub repo either[here](https://github.com/helxplatform/search-chart/blob/develop/README.md) or [here](https://github.com/helxplatform/search-chart/blob/master/values.yaml).
 
 The sample Helm values file below can be used as a starting point. It will install the following sub-components:
+
 - Airflow
 - Redis
 - Elasticsearch
@@ -150,7 +157,7 @@ Replace `<your-namespace>` with the actual Kubernetes namespace you want to targ
 The `upgrade --install` command upgrades the Dug release if it already exists, and installs it if it doesn't.
 The `--skip-crds` option tells Helm not to install any [Custom Resource Definitions](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) (CRDs). CRDs define new types of resources for Kubernetes, but sometimes, you don't want Helm to install them if they’ve already been defined elsewhere or if you want to handle them separately. If your Kubernetes user does not have permissions to create CRDs, then this option is required or the installation/upgrade will fail.
 
-`-f <path-to-your-values-file>'
+`-f <path-to-your-values-file>`
 The `-f` flag allows you to specify a values file (`<path-to-your-values-file>`) that contains configuration settings for the Helm chart. Replace `<path-to-your-values-file>` with the path to and filename of your values file.
 
 `search` is the the name you give to this installation/upgrade of Dug, which allows you to refer to it later when you need to upgrade or delete it. You may replace `search` with a name of your choosing.
