@@ -158,6 +158,7 @@ The `upgrade --install` command upgrades the Dug release if it already exists, a
 The `--skip-crds` option tells Helm not to install any [Custom Resource Definitions](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) (CRDs). CRDs define new types of resources for Kubernetes, but sometimes, you don't want Helm to install them if they’ve already been defined elsewhere or if you want to handle them separately. If your Kubernetes user does not have permissions to create CRDs, then this option is required or the installation/upgrade will fail.
 
 `-f <path-to-your-values-file>`
+
 The `-f` flag allows you to specify a values file (`<path-to-your-values-file>`) that contains configuration settings for the Helm chart. Replace `<path-to-your-values-file>` with the path to and filename of your values file.
 
 `search` is the the name you give to this installation/upgrade of Dug, which allows you to refer to it later when you need to upgrade or delete it. You may replace `search` with a name of your choosing.
