@@ -154,7 +154,9 @@ $ helm -n <your-namespace> upgrade --install --skip-crds -f <path-to-your-values
 ```
 
 Replace `<your-namespace>` with the actual Kubernetes namespace you want to target.
+
 The `upgrade --install` command upgrades the Dug release if it already exists, and installs it if it doesn't.
+
 The `--skip-crds` option tells Helm not to install any [Custom Resource Definitions](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) (CRDs). CRDs define new types of resources for Kubernetes, but sometimes, you don't want Helm to install them if they’ve already been defined elsewhere or if you want to handle them separately. If your Kubernetes user does not have permissions to create CRDs, then this option is required or the installation/upgrade will fail.
 
 `-f <path-to-your-values-file>`
