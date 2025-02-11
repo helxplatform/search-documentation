@@ -43,23 +43,11 @@ $ helm search repo helx-charts
 ```
 
 
-## 3. Install Dug
+## 3. Create a Helm Values File 
 
-From your local machine, create a Helm values file (config file) and inject those values into the existing Search Helm chart shown below.
+From your local machine, create a Helm [values file](https://helm.sh/docs/chart_best_practices/values/) with values of your choice. The full list of configurable options can be found [here](https://github.com/helxplatform/search-chart/blob/develop/README.md) or [here](https://github.com/helxplatform/search-chart/blob/master/values.yaml).
 
-In the Kubernetes environment, (in a single pod or what?) Dug's configuration is supplied by helm values files that 
-
-```bash
-$ helm -n <your-namespace> upgrade --install \
---skip-crds -f <path-to-your-values-file> \
-search helx-charts/search
-```
-
- The `--skip-crds`, in the first command above is required if your Kubernetes user does not have permissions to create custom resource definitions (CRDs).
-
-
-When installing search instance the following sub-components are installed.
-
+The sample Helm values file below can be used as a starting point. It will install the following sub-components:
 - Airflow
 - Redis
 - Elasticsearch
@@ -67,8 +55,7 @@ When installing search instance the following sub-components are installed.
 - Dug Search API
 - Dug UI
 
-The configuration below can be used as a starting point for installation.
-
+__Sample Helm values file:__
 ```yaml
 airflow:
   airflow:
@@ -159,14 +146,22 @@ ui:
     hidden_result_tabs: "cdes"
 ```  
 
-Full list of configurable options can be found [here](https://github.com/helxplatform/search-chart/blob/master/values.yaml).
+## 4. Install or Upgrade Dug
 
-## 4. Customizing Helm Chart Values
-
-## 5. Installing Search
-
-Once we have the proper values configured and stored in the file `search-values.yaml` we can use the following command install/upgrade a Search (DUG) instance.
-
+Use the command below to install or upgrade Dug using your Helm values file.
 ```bash
-helm -n <your-namespace> upgrade --install --skip-crds -f search-values.yaml search helx-charts/search
+$ helm -n <your-namespace> upgrade --install --skip-crds -f <path-to-your-values-file> search helx-charts/search
 ```
+
+Replace `<your-namespace>` with the actual Kubernetes namespace you want to target.
+The `upgrade --install` command upgrades the Dug release if it already exists, and installs it if it doesn't.
+The `--skip-crds` option tells Helm not to install any [Custom Resource Definitions](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) (CRDs). CRDs define new types of resources for Kubernetes, but sometimes, you don't want Helm to install them if they’ve already been defined elsewhere or if you want to handle them separately. If your Kubernetes user does not have permissions to create CRDs, then this option is required or the installation/upgrade will fail.
+
+`-f <path-to-your-values-file>'
+The `-f` flag allows you to specify a values file (`<path-to-your-values-file>`) that contains configuration settings for the Helm chart. Replace `<path-to-your-values-file>` with the path to and filename of your values file.
+
+`search` is the the name you give to this installation/upgrade of Dug, which allows you to refer to it later when you need to upgrade or delete it. You may replace `search` with a name of your choosing.
+
+`helx-charts/search` is the Helm chart you’re using. It’s a package of pre-configured Kubernetes resources. helx-charts is the repository (could be an official or private Helm chart repository), and search is the specific chart you are installing or upgrading.
+
+
