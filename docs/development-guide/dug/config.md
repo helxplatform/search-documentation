@@ -1,16 +1,9 @@
 
 # Dug Configuration
 
-RENCI uses [Helm](https://helm.sh/) charts, [Kubernetes](https://kubernetes.io/), [Redis Server](https://redis.io/), [Apache Airflow](https://airflow.apache.org/) and [Elasticsearch](https://www.elastic.co/). The Dug Configuration discussed below relies on that tooling. Please contact us if you want to use something else... 
+The Dug configuration outlined below relies on a stack that includes [Helm](https://helm.sh/) charts, [Kubernetes](https://kubernetes.io/), [Redis Server](https://redis.io/), [Apache Airflow](https://airflow.apache.org/), and [Elasticsearch](https://www.elastic.co/) running in [Google Cloud](https://cloud.google.com/).  
 
-Any customizations to this configuration for specific instantiations of Dug (e.g., BDC Dug) are documented in that version of Dug's Helm chart and are not made publicly available on this website. 
-
-Laura's notes:
-If you need to customize: 
-Deploy using helm: https://dug.readthedocs.io/en/latest/deployment-guide/helm/
-Customize through the helm chart: https://github.com/helxplatform/dug/blob/develop/src/dug/config.py
-
-
+Customizations for specific implementations of Dug (e.g., BDC Dug) are documented in the corresponding version of Dug's Helm chart and are not publicly available on this website.
 
 ## 1. Set Up the Dug Environment
 PJ's stuff here
