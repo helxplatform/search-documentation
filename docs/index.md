@@ -1,37 +1,26 @@
 # Dug: Digging up Dark Data
 
-Dug applies semantic web and knowledge graph methods to improve the 
-[FAIR](https://www.go-fair.org/fair-principles/)-ness of research data.
+Dug is a semantic search engine that uses ontological knowledge graphs to to suggest relevant connections between biomedical datasets used in peer-reviewed research. It standardizes metadata from diverse public sources and employs natural language processing to extract ontology identifiers to build a graph of study variables and related concepts. Using Translator Query Language (TranQL), Dug enriches the graph with additional connections, and indexes study variables and ontology terms to an Elasticsearch endpoint, queried via the Dug API.
 
-As an example, [dbGaP](https://www.ncbi.nlm.nih.gov/gap/) is a rich source of metadata about biomedical knowledge 
-derived from clinical research like the underutilized [TOPMed](https://www.nhlbiwgs.org/) data sets. A key obstacle to 
-leveraging this knowledge is the lack of researcher tools to navigate from a set of concepts of interest towards 
-relevant study variables.
+The API processes natural language queries, retrieving results from the index to display relationships between ontology terms and datasets, organized by data type or format. Results include only ontology concepts and public metadata&mdash;no sensitive data (e.g., PII, PHI) is included [1].
 
-While other approaches to searching this data exist, our focus is semantic search: For us, "relevant" is defined as 
-having a basis in curated, peer reviewed ontologically represented biomedical knowledge. Given a search term, 
-Dug returns results that are related based on connections in ontological biomedical knowledge graphs.
+Dug leverages knowledge graphs to enhance the discovery of relevant research data in a way that aligns with the [FAIR principles](https://www.go-fair.org/fair-principles/). For instance, [dbGaP](https://www.ncbi.nlm.nih.gov/gap/) serves as a valuable repository of biomedical information, featuring datasets like [TOPMed](https://www.nhlbiwgs.org/) that can otherwise be challenging to navigate. Unlike other search methods, Dug prioritizes connecting user search terms to curated, peer-reviewed biomedical knowledge derived from clinical research, ensuring more precise and meaningful results.
 
 ### Features
 
-- **Annotating Metadata with Biomedical Ontologies**: Study metadata are enriched using standardized terms from biomedical ontologies, 
-such as those available through the [OBO Foundry](https://bioportal.bioontology.org/). This practice ensures consistent terminology, 
-facilitating data integration and interoperability across various datasets. 
+- **Annotating Metadata with Biomedical Ontologies**: Study metadata is enriched using standardized terms from biomedical ontologies, such as those available through the [OBO Foundry](https://bioportal.bioontology.org/). This practice ensures consistent terminology, promoting data integration and interoperability across various datasets. 
 
-- **Contextualizing with the Biolink Model**: The annotated metadata are structured within the [Biolink Model](https://biolink.github.io/biolink-model/), an upper ontology 
-that standardizes types and relationships in biological knowledge graphs. This model provides a unified framework, enabling diverse datasets to be integrated and understood in a cohesive manner.
+- **Contextualizing with the Biolink Model**: The annotated metadata are organized using the [Biolink Model](https://biolink.github.io/biolink-model/), an upper ontology that standardizes types and relationships in biological knowledge graphs. This model provides a unified framework, enabling diverse datasets to be linked and understood in a cohesive manner.
 
-- **Federation with Larger Knowledge Graphs**: By aligning study data with the Biolink Model, it becomes possible to federate this information with larger knowledge graphs, such as those developed by the NCATS Biomedical Data Translator program . 
-This federation allows for comprehensive data linkage and discovery across multiple datasets.
-- **Creating a Full-Text Search Index**: Leveraging the interconnected knowledge graphs, a full-text search index is constructed. This index enhances the ability to 
-perform efficient and effective searches across the integrated data, supporting semantic queries and facilitating new insights in biomedical research.
+- **Federation with Larger Knowledge Graphs**: By aligning study data to the Biolink Model, the information can be integrated with larger knowledge graphs, such as those created by the NCATS Biomedical Data Translator program. Federation allows for comprehensive data linkage and discovery across multiple datasets.
+
+- **Creating a Full-Text Search Index**: Using knowledge graphs, Dug constructs a full-text search index to enable efficient and precise searches across integrated data. This supports semantic queries, fostering deeper insights and advancements in biomedical research.
 
 
 # Roger
 
+Dug is available in two versions to suit different needs: Core Dug and Roger. Core Dug is a standalone platform that requires minimal configuration and offers limited customization, making it ideal for users managing smaller datasets with fewer anticipated changes. On the other hand, Roger is a powerful, modular processing pipeline designed for indexing large-scale datasets. It provides advanced customization options, including the ability to integrate custom-built parsers and annotators, greater flexibility for incorporating new datasets, enhanced precision for isolating and troubleshooting pipeline components to improve efficiency, and asset backup capabilities using the repository of your choice.
 
-Roger is a comprehensive pipeline toolkit designed to index datasets on a large scale. It leverages the internals of 
-Dug, breaking them down into discrete tasks to facilitate the management of the indexing workflow with robust 
-efficiency. The internal procedures of Dug are deconstructed into logical steps, enhancing the management of 
-failures, restarts, and parallelization.
+---
 
+1. *Waldrop, Alexander M., et al. (1 Jan. 2021). Dug: A Semantic Search Engine Leveraging Peer-Reviewed Literature to Span Biomedical Data Repositories. bioRxiv, Cold Spring Harbor Laboratory, www.biorxiv.org/content/10.1101/2021.07.07.451461v1.*
