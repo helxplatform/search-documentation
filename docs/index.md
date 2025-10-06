@@ -1,6 +1,6 @@
 # Dug: Digging up Dark Data
 
-Dug is a semantic search engine that uses ontological knowledge graphs to to
+Dug is a semantic search engine that uses ontological knowledge graphs to
 suggest relevant connections between validated public biomedical datasets. It
 uses natural language processing to extract ontological identifiers from
 standardized metadata, then builds a graph of study variables and related
