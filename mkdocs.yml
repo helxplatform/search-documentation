@@ -7,7 +7,6 @@ nav:
         - Introduction: index.md
         - Dug Architecture: architecture/dug.md
         - Roger Architecture: architecture/roger.md
-        - Frequently Asked Questions: faq.md
         - License: license.md
     - Development Guide:
         - Dug:
