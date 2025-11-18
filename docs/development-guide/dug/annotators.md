@@ -39,26 +39,27 @@ When `dug crawl` runs, the `Crawler` passes the description of every parsed elem
 sequenceDiagram
     participant C as Crawler
     participant A as Annotator
-    participant API as External API (Monarch/SapBERT)
+    participant API as "External API (Monarch/SapBERT)"
     participant N as Normalizer
     participant S as SynonymFinder
 
-    C->>A: annotate(text="history of heart attack")
-    A->>A: Preprocess Text (remove stopwords, expand abbr)
-    A->>API: Request Entity Extraction
-    API-->>A: Returns [RawID: "HP:0001658" (Myocardial Infarction)]
+    C->>A: annotate("history of heart attack")
+    A->>A: Preprocess text (stopwords, abbrev)
+    A->>API: Request entity extraction
+    API-->>A: Raw ID: HP:0001658 (Myocardial Infarction)
     
-    loop For each Raw ID
-        A->>N: normalize("HP:0001658")
-        N-->>A: Returns Canonical ID + Biolink Types
-        
-        A->>S: get_synonyms("HP:0001658")
-        S-->>A: Returns ["Heart attack", "Cardial infarction", ...]
-        
-        A->>A: Create DugIdentifier object
+    loop for each Raw ID
+        A->>N: normalize(HP:0001658)
+        N-->>A: Canonical ID + Biolink types
+
+        A->>S: get_synonyms(HP:0001658)
+        S-->>A: ["Heart attack", "Cardial infarction", ...]
+
+        A->>A: Create DugIdentifier
     end
-    
-    A-->>C: Returns List[DugIdentifier]
+
+    A-->>C: List of DugIdentifier
+
 ```
 
 ## 3. Existing Implementations
