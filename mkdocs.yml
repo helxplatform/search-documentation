@@ -92,6 +92,7 @@ markdown_extensions:
     - smarty
 
 plugins:
+    - mermaid2
     - search
     - autorefs
     - glightbox:

@@ -39,6 +39,3 @@ The system relies on the following containerized services:
 * **API Service:** Python/FastAPI application handling search requests and crawler execution.
 * **Elasticsearch:** Primary storage for indexed knowledge graphs and full-text search capability.
 * **Redis:** Caching layer for high-volume service requests and annotator caching.
-
-
-Would you like me to create a more detailed guide on **how to write a new Parser** or **how to configure the Annotation pipeline** next?
