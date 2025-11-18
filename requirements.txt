@@ -6,3 +6,4 @@ mkdocs-material >=8.2.7
 mkdocs-autorefs
 mkdocs-markdownextradata-plugin >=0.2.5
 mkdocs-glightbox
+mkdocs-mermaid2-plugin
