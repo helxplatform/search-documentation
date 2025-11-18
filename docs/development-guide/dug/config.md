@@ -59,45 +59,18 @@ __Sample Helm values file:__
 ```yaml
 airflow:
   airflow:
-    image:
-      tag: "develop"      
-    config:
-        # AIRFLOW__CLI__ENDPOINT_URL: https://yk-heal.apps.renci.org/airflow
-        AIRFLOW__WEBSERVER__BASE_URL: https://yk-heal.apps.renci.org/airflow
-        
+    config:        
+        AIRFLOW__WEBSERVER__BASE_URL: https://example.com/airflow/        
         AIRFLOW__KUBERNETES__DELETE_WORKER_PODS: "FALSE"
     users:
       # Configure airflow user
-      - email: kebedey@renci.org
-        firstName: Yaphet
-        lastName: Kebede
+      - email: mail-of-user@email.com
+        firstName: user
+        lastName: pass
         password: somePass
         role: Admin
         username: admin
-    # Resource config for all task runner pods.
-    #kubernetesPodTemplate:
-    #  resources:
-    #    limits:
-    #      cpu: 2
-    #      memory: 1G
-    #    requests:
-    #      cpu: 2
-    #      memory: 1G
-  dags:
-    gitSync:      
-      branch: "develop"
-api:
-  image:
-    repository: containers.renci.org/helxplatform/dug
-    tag: "v2.10.0-prerelease12"
-    pullPolicy: Always  
-  # scale api pods as desired
-  replicas: 1
-#elasticsearch:
-  # uncomment the following to run just a single elastic search , by default a cluster
-  # of three es pods is created.
-  #replicas: 1
-  #clusterHealthCheckParams: "wait_for_status=yellow&timeout=1s"
+
 
 config:   
     data_source: s3
@@ -142,8 +115,7 @@ ui:
       url: https:\/\/<your ingress address>\/search-api
     tranql_enabled: "true"    
     tranql_url: https:\/\/<your ingress address>\/tranql
-    # hide tabs on UI 
-    hidden_result_tabs: "cdes"
+    # hide tabs on UI    
 ```  
 
 ## 4. Install or Upgrade Dug
